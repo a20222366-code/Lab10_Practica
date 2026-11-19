@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+
+} /* Letra y margen general de la página */
+
+.panel {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+} /* Pone caja izq, caja der y botones en fila con separación */
+
+.caja {
+    width: 340px;
+} /* Ancho de cada caja */
+
+.lista {
+    height: 260px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 4px;
+} /* Altura fija con scroll vertical, borde gris redondeado */
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+} /* Cada fila de la lista: nombre a la izq y control a la der */
+
+.item.activo {
+    background: #dbeafe;
+    outline: 1px solid #3b82f6;
+} /* Fila resaltada en azul cuando está seleccionada en la caja derecha */
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+} /* Botones U y D uno encima del otro */
+
+.botones button {
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-weight: bold;
+    cursor: pointer;
+} /* Estilo oscuro de los botones */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+} /* Tabla a todo el ancho y sin espacios entre celdas */
+
+thead {
+    background: #222;
+    color: #fff;
+} /* Cabecera oscura con letra blanca */
+
+th, td {
+    padding: 6px 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+} /* Espaciado y línea inferior de cada celda */
+
+th input, th select {
+    width: 100%;
+    box-sizing: border-box;
+} /* Los filtros ocupan todo el ancho de la columna */
+
+td img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+} /* Foto del usuario en círculo de 40px */

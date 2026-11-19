@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8"> <!-- Codificación para que se vean bien tildes y ñ -->
+    <title>Tabla de campos y filtros dinámicos</title>
+    <link rel="stylesheet" href="css/estilos.css"> <!-- Enlaza el archivo de estilos -->
+</head>
+
+
+<body>
+
+<div class="panel"> <!-- Contenedor que pone las dos cajas y los botones en una fila -->
+
+    <!-- Primera caja (se pone a la izquierda) -->
+    <div class="caja"> <!-- Caja izquierda -->
+        <h3>Disponibles:</h3> <!-- Título de la caja izquierda -->
+        <div id="listaDisponibles" class="lista"></div> <!-- Aquí JS dibuja los campos con checkbox -->
+    </div> <!-- Fin caja izquierda -->
+
+
+    <!-- Segunda caja (se pone al centro) -->
+    <div class="caja"> <!-- Caja derecha -->
+        <h3>Orden y Tipo:</h3> <!-- Título de la caja derecha -->
+        <div id="listaSeleccionados" class="lista"></div> <!-- Aquí JS dibuja los campos elegidos con su combobox -->
+    </div> <!-- Fin caja derecha -->
+
+
+    <!-- Tercera caja (se pone a la derecha) -->
+    <div class="botones"> <!-- Contenedor de los botones U y D -->
+        <button id="btnUp">U</button> <!-- Sube el campo resaltado una posición -->
+        <button id="btnDown">D</button> <!-- Baja el campo resaltado una posición -->
+    </div>
+
+    <!-- Como el tercero (los botones) es muy pequeño entonces se verá como
+    que la segunda caja está a la derecha en lugar del centro.
+    -->
+
+
+</div>
+
+
+
+
+
+<table id="tabla"> <!-- Tabla que JS llenará (no se escribe ninguna fila a mano) -->
+    <thead id="cabecera"></thead> <!-- Aquí JS dibuja los nombres de columna y los filtros -->
+    <tbody id="cuerpo"></tbody> <!-- Aquí JS dibuja las filas de datos -->
+</table> <!-- Fin de la tabla -->
+
+<script src="js/app.js"></script> <!-- Carga el JS al final para que los elementos de arriba ya existan -->
+
+</body>
+
+</html>
